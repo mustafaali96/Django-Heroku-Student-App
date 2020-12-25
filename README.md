@@ -34,11 +34,11 @@ ALLOWED_HOSTS = ['your-django-app-name.herokuapp.com'] #Use your App name at Lin
 ## Create git ignore file
 Create a .gitignore file in the project root:
 
-`` db.sqlite3 
-`` *.pyc 
-`` __pycache__/ 
-~ *.py[cod] 
-~ .DS_Store
+db.sqlite3 <br>
+*.pyc <br>
+__pycache__/ <br>
+*.py[cod] <br>
+.DS_Store<br>
 
 make sure you're in project root directory /Django-Heroku-Student-App and your heroku is logged in
 
