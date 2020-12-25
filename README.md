@@ -2,24 +2,27 @@
 
 ## Dependencies
 
-`1` django-model-utils
-`2` django django-heroku gunicorn
-`3` git
-`4` heroku cli
+`1` django-model-utils <br>
+`2` django django-heroku gunicorn <br>
+`3` git <br>
+`4` heroku cli <br>
 
 # Fork this repo
 
-## create app on heroku
+## Create app on heroku
 
 in my case app name is > 'your-django-app-name'
+> create app
 
-create app
+## Install Git & Heroku
 
 Install [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
 Install [Heroku CLI](https://devcenter.heroku.com/articles/heroku-command-line)
 
-cmd > heroku login 
+## Login Heroku (in terminal)
+
+> heroku login 
 
 (login with your credentials)
 
