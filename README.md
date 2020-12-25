@@ -48,6 +48,19 @@ make sure you're in project root directory /Django-Heroku-Student-App and your h
 
 > git push
 
+#Connect your Git repo with Heroku
+
+https://dashboard.heroku.com/apps/<your-django-app-name>/deploy/github  #your app name
+
+Click on Connect to GitHub under Deployment method Section
+
+connect your github profile
+
+search > Django-Heroku-Student-App
+
+Connect your Git repo
+
+Deploy Branch
 
 # Custom Chnages
  
