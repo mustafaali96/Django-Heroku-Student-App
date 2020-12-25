@@ -64,6 +64,10 @@ Deploy Branch
 
 
 # Custom Chnages
+
+heroku git:remote -a your-django-app-name 
+git push heroku main
+
  
 clone this repo
  > [mustafaali96/Django-Heroku-Student-App](https://github.com/<your-git-username>/Django-Heroku-Student-App.git)
