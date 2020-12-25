@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from pathlib import Path
 import os
 from django.conf import settings
+import django_heroku
 from django.urls import reverse_lazy
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -29,7 +30,7 @@ SECRET_KEY = '&zc4%(gr924poqz02+#74ki=f#-ludzsq@$nqqy67!u)6iei&='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1', 'student-django-app.herokuapp.com'] #Use your App name
 
 AUTH_USER_MODEL = 'custom_app.User'
 # Application definition
@@ -82,7 +83,7 @@ WSGI_APPLICATION = 'custom_models.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': str(os.path.join(BASE_DIR, "db.sqlite3"))
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 

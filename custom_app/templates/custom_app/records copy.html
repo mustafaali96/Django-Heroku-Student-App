@@ -1,30 +1,4 @@
-{% comment %} {% block content %}
-    <center>
-    {% if request.user.role == 'Teacher' %}
-    <h1 class="display-3" >Students Records</h1>
-
-    {% elif request.user.role == 'Student' %}
-    <h1 class="display-3" >Teachers List</h1>
-
-    {% else %}
-    <h1 class="display-3" >All Records</h1>
-
-    {% endif %}
-    <form method='POST'>
-        <table class = 'w-50 table table-light' ">
-            {% for field in record %}
-            <tr>
-                <th>{{field.username}}</th>
-                <td>{{ field.role }}</td>
-                <td>{{ field.subject }}</td>
-            </tr>
-            {% endfor %}
-        </table>
-    </form>
-    <a href= "{% url 'home' %}" class="btn"</a>
-  <button>Back</button></a>
-</center>
-{% endblock %} {% endcomment %}
+{% load static %}
 
 <!DOCTYPE html>
 <html>
