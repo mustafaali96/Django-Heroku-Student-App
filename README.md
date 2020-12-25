@@ -2,21 +2,27 @@
 
 ## Dependencies
 
-django-model-utils
-django django-heroku gunicorn
-git
-heroku cli
+`1` django-model-utils
+`2` django django-heroku gunicorn
+`3` git
+`4` heroku cli
 
-Fork this repo
+# Fork this repo
 
-create app on heroku
-in my case app name is 'your-django-app-name'
+## create app on heroku
+
+in my case app name is > 'your-django-app-name'
+
 create app
 
-Install (Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+Install [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+
 Install [Heroku CLI](https://devcenter.heroku.com/articles/heroku-command-line)
 
-cmd > heroku login (login with your credentials)
+cmd > heroku login 
+
+(login with your credentials)
+
 You'll see something like >  Logged in as user@mail.com
 
 ## Update your settings.py file
@@ -26,18 +32,23 @@ ALLOWED_HOSTS = ['your-django-app-name.herokuapp.com'] #Use your App name at Lin
 ## Create git ignore file
 Create a .gitignore file in the project root:
 
-`db.sqlite3 
-`*.pyc 
-`__pycache__/ 
-`*.py[cod] 
-`.DS_Store
+` db.sqlite3 
+` *.pyc 
+` __pycache__/ 
+` *.py[cod] 
+` .DS_Store
 
-make sure you're in project root directory /Django-Heroku-Student-App
+make sure you're in project root directory /Django-Heroku-Student-App and your heroku is logged in
 
+> git add .
+
+> git commit -m "test django app"
+
+> git push
 
 
 # Custom Chnages
  
 clone this repo
- > https://github.com/<your-git-username>/Django-Heroku-Student-App.git
+ > [mustafaali96/Django-Heroku-Student-App](https://github.com/<your-git-username>/Django-Heroku-Student-App.git)
 
