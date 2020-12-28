@@ -33,19 +33,7 @@
     width: 100%;
 }
 
-/*
-.slide-bg-one {
-    background: rgba(0, 0, 0, 0) url("assest/img/slider/slide-1.jpg") no-repeat scroll center center / cover;
-}
 
-.slide-bg-two {
-    background: rgba(0, 0, 0, 0) url("assest/img/slider/slide_1.jpg") no-repeat scroll center center / cover;
-}
-
-.slide-bg-three {
-    background: rgba(0, 0, 0, 0) url("assest/img/slider/slide_2.jpg") no-repeat scroll center center / cover;
-}
-*/
 
 .owl-item.active .welcome-single-slide .welcome-text h4 {
     -webkit-animation: 1s ease 1s normal both 1 running fadeInUp;
