@@ -1,1 +1,1 @@
-web: gunicorn custom_models.wsgi
+web: gunicorn custom_models.wsgi --log-file -
