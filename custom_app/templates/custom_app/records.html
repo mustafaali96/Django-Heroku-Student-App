@@ -1,4 +1,30 @@
-{% load static %}
+{% comment %} {% block content %}
+    <center>
+    {% if request.user.role == 'Teacher' %}
+    <h1 class="display-3" >Students Records</h1>
+
+    {% elif request.user.role == 'Student' %}
+    <h1 class="display-3" >Teachers List</h1>
+
+    {% else %}
+    <h1 class="display-3" >All Records</h1>
+
+    {% endif %}
+    <form method='POST'>
+        <table class = 'w-50 table table-light' ">
+            {% for field in record %}
+            <tr>
+                <th>{{field.username}}</th>
+                <td>{{ field.role }}</td>
+                <td>{{ field.subject }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </form>
+    <a href= "{% url 'home' %}" class="btn"</a>
+  <button>Back</button></a>
+</center>
+{% endblock %} {% endcomment %}
 
 <!DOCTYPE html>
 <html>
@@ -53,6 +79,9 @@ h2 small {
 .responsive-table .col-3 {
   flex-basis: 25%;
 }
+.responsive-table .col-4 {
+  flex-basis: 25%;
+}
 
 @media all and (max-width: 700px) {
   .responsive-table .table-header {
@@ -95,6 +124,20 @@ h2 small {
       <div class="col col-1">Name</div>
       <div class="col col-2">Subject</div>
       <div class="col col-3">Role</div>
+
+      {% if request.user.role == 'Teacher' %}
+      <div class="col col-4">View Student</div>
+    </li>
+    {% for field in record %}
+    <li class="table-row">
+      <div class="col col-1" data-label={{field.username}}>{{field.username}}</div>
+      <div class="col col-2" data-label={{ field.subject }}>{{ field.subject }}</div>
+      <div class="col col-3" data-label={{ field.role }}>{{ field.role }}</div>
+      <div class="col col-4" data-label={{ field.role }}>Assign subject</div>
+    </li>
+    {% endfor %}
+
+    {% else %}
     </li>
     {% for field in record %}
     <li class="table-row">
@@ -103,6 +146,7 @@ h2 small {
       <div class="col col-3" data-label={{ field.role }}>{{ field.role }}</div>
     </li>
     {% endfor %}
+    {% endif %}
     
   </ul>
 </div>

@@ -6,14 +6,44 @@ from django.contrib.auth.base_user import AbstractBaseUser
 from model_utils import Choices
 
 class User(AbstractUser):
-    subjects = Choices('Maths', 'Programming', 'Science', 'Electrical')
-    subject = models.CharField(max_length=30, choices=subjects, 
-                               default=subjects.Science, 
-                               help_text = ('Enter your Subject'))
-    roles = Choices('Student', 'Teacher')
-    role = models.CharField(max_length=20, choices=roles,
-                  default=roles.Student)
     username = models.CharField(max_length=100, unique=True)
     password = models.CharField(max_length=50)
+    first_name = models.CharField(max_length=50)
+    last_name = models.CharField(max_length=50)
+    subject = models.ForeignKey('Course', on_delete=models.CASCADE,
+                               null=True) 
+    roles = Choices('Student', 'Teacher')
+    role = models.CharField(max_length=20, choices=roles) 
+    
     def __str__(self):
         return self.username
+
+
+class Course(models.Model):
+    all_courses = [
+    ('Engineering', (
+            ('Software Engineering', 'SE'),
+            ('Computer Engineering', 'CE'),
+            ('Electrical Engineering', 'EE'),
+        )
+    ),
+    ('Commerce', (
+            ('Bachelor of Business Administration', 'BBA'),
+            ('Chartered Accountancy', 'CA'),
+        )
+    ),
+    ('Medical', (
+            ('Neuroscience', 'NS'),
+            ('Bachelor of Medicine, Bachelor of Surgery', 'MBBS'),
+        )
+    ),
+    ]
+    courses = models.CharField(max_length=50, choices=all_courses,
+                                unique=True)
+
+
+    def __str__(self):
+        return self.courses
+
+
+
