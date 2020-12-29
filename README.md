@@ -11,7 +11,7 @@
 
 ## Create app on heroku
 
-in my case app name is > 'your-django-app-name'
+in my case app name is > 'your-heroku-app-name'
 
 ## Install Git & Heroku
 
@@ -29,7 +29,7 @@ You'll see something like >  Logged in as user@mail.com
 
 ## Update your settings.py file
 
-ALLOWED_HOSTS = ['your-django-app-name.herokuapp.com'] #Use your App name at Line 33
+ALLOWED_HOSTS = ['your-heroku-app-name.herokuapp.com'] #Use your App name at Line 33
 
 ## Create git ignore file
 Create a .gitignore file in the project root:
@@ -50,7 +50,7 @@ make sure you're in project root directory /Django-Heroku-Student-App and your h
 
 #Connect your Git repo with Heroku
 
-https://dashboard.heroku.com/apps/(your-django-app-name)/deploy/github  #your app name
+https://dashboard.heroku.com/apps/(your-heroku-app-name)/deploy/github  #your app name
 
 Click on Connect to GitHub under Deployment method Section
 
@@ -65,16 +65,21 @@ Deploy Branch
 ## if collectstatic error
 
 try on console with heroky login <br>
-> heroku config:set DISABLE_COLLECTSTATIC=1 --app (your-django-appname)
+> heroku config:set DISABLE_COLLECTSTATIC=1 --app 'your-heroku-app-name'
+
+# Make Migrations
+
+> heroku run python manage.py makemigrations --app 'your-heroku-app-name' <br>
+> heroku run python manage.py migrate --app 'your-heroku-app-name'
 
 # Create SuperUser
 
-> heroku run python manage.py createsuperuser --app (your-django-appname)
+> heroku run python manage.py createsuperuser --app 'your-heroku-app-name'
 
 
 # Custom Chnages
 
-heroku git:remote -a your-django-app-name 
+heroku git:remote -a your-heroku-app-name 
 git push heroku main
 
 
@@ -82,5 +87,5 @@ git push heroku main
  
 # clone this repo
  
- > [mustafaali96/Django-Heroku-Student-App](https://github.com/mustafaali96/Django-Heroku-Student-App)
+ > [Django Heroku Student App](https://github.com/mustafaali96/Django-Heroku-Student-App)
 

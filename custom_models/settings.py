@@ -30,7 +30,7 @@ SECRET_KEY = '&zc4%(gr924poqz02+#74ki=f#-ludzsq@$nqqy67!u)6iei&='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'student-django-app.herokuapp.com', 'student-app-django.herokuapp.com'] #Use your <Appname>.herokuapp.com
+ALLOWED_HOSTS = ['127.0.0.1', 'student-app-django.herokuapp.com'] #Use your <heroku-appname>.herokuapp.com
 
 AUTH_USER_MODEL = 'custom_app.User'
 # Application definition
