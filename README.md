@@ -69,7 +69,7 @@ try on console with heroky login <br>
 
 # Create SuperUser
 
-> heroku run python manage.py createsuperuser --app (your-django-appname>)
+> heroku run python manage.py createsuperuser --app (your-django-appname)
 
 
 # Custom Chnages
