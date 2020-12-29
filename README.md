@@ -50,7 +50,7 @@ make sure you're in project root directory /Django-Heroku-Student-App and your h
 
 #Connect your Git repo with Heroku
 
-https://dashboard.heroku.com/apps/<your-django-app-name>/deploy/github  #your app name
+https://dashboard.heroku.com/apps/(your-django-app-name)/deploy/github  #your app name
 
 Click on Connect to GitHub under Deployment method Section
 
@@ -65,11 +65,11 @@ Deploy Branch
 ## if collectstatic error
 
 try on console with heroky login <br>
-> heroku config:set DISABLE_COLLECTSTATIC=1 --app <your-django-appname>
+> heroku config:set DISABLE_COLLECTSTATIC=1 --app (your-django-appname)
 
 # Create SuperUser
 
-> heroku run python manage.py createsuperuser --app <your-django-appname>
+> heroku run python manage.py createsuperuser --app (your-django-appname>)
 
 
 # Custom Chnages
@@ -80,6 +80,7 @@ git push heroku main
 
 
  
-clone this repo
- > [mustafaali96/Django-Heroku-Student-App](https://github.com/<your-git-username>/Django-Heroku-Student-App.git)
+# clone this repo
+ 
+ > [mustafaali96/Django-Heroku-Student-App](https://github.com/mustafaali96/Django-Heroku-Student-App)
 
