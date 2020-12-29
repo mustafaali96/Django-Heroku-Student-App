@@ -27,18 +27,13 @@ Install [Heroku CLI](https://devcenter.heroku.com/articles/heroku-command-line)
 
 You'll see something like >  Logged in as user@mail.com
 
+# Clone this repo locally
+
 ## Update your settings.py file
 
 ALLOWED_HOSTS = ['your-heroku-app-name.herokuapp.com'] #Use your App name at Line 33
 
-## Create git ignore file
-Create a .gitignore file in the project root:
-
-db.sqlite3 <br>
-*.pyc <br>
-__pycache__/ <br>
-*.py[cod] <br>
-.DS_Store<br>
+## Push to Git
 
 make sure you're in project root directory /Django-Heroku-Student-App and your heroku is logged in
 
@@ -50,6 +45,7 @@ make sure you're in project root directory /Django-Heroku-Student-App and your h
 
 #Connect your Git repo with Heroku
 
+[Your Heroku Apps](https://dashboard.heroku.com/apps/) <br>
 https://dashboard.heroku.com/apps/(your-heroku-app-name)/deploy/github  #your app name
 
 Click on Connect to GitHub under Deployment method Section
@@ -64,7 +60,7 @@ Deploy Branch
 
 ## if collectstatic error
 
-try on console with heroky login <br>
+try on console with heroku login <br>
 > heroku config:set DISABLE_COLLECTSTATIC=1 --app 'your-heroku-app-name'
 
 # Make Migrations
