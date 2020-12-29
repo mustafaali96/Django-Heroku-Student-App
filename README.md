@@ -7,19 +7,19 @@
 `3` git <br>
 `4` heroku cli <br>
 
-# Fork this repo
+# 1 Fork this repo
 
-## Create app on heroku
+## 2 Create app on heroku
 
 in my case app name is > 'your-heroku-app-name'
 
-## Install Git & Heroku
+## 3 Install Git & Heroku
 
 Install [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
 Install [Heroku CLI](https://devcenter.heroku.com/articles/heroku-command-line)
 
-## Login Heroku (terminal)
+## 4 Login Heroku (terminal)
 
 > heroku login 
 
@@ -27,13 +27,13 @@ Install [Heroku CLI](https://devcenter.heroku.com/articles/heroku-command-line)
 
 You'll see something like >  Logged in as user@mail.com
 
-# Clone this repo locally
+# 5 Clone this repo locally
 
-## Update your settings.py file
+## 6 Update your settings.py file
 
 ALLOWED_HOSTS = ['your-heroku-app-name.herokuapp.com'] #Use your App name at Line 33
 
-## Push to Git
+## 7 Push to Git
 
 make sure you're in project root directory /Django-Heroku-Student-App and your heroku is logged in
 
@@ -43,7 +43,7 @@ make sure you're in project root directory /Django-Heroku-Student-App and your h
 
 > git push
 
-#Connect your Git repo with Heroku
+# 8 Connect your Git repo with Heroku
 
 [Your Heroku Apps](https://dashboard.heroku.com/apps/) <br>
 https://dashboard.heroku.com/apps/(your-heroku-app-name)/deploy/github  #your app name
@@ -58,7 +58,7 @@ Connect your Git repo
 
 Deploy Branch
 
-## if collectstatic error
+## if collectstatic error (heroku deployment error)
 
 try on console with heroku login <br>
 > heroku config:set DISABLE_COLLECTSTATIC=1 --app 'your-heroku-app-name'
