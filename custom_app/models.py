@@ -7,13 +7,13 @@ from model_utils import Choices
 
 class User(AbstractUser):
     username = models.CharField(max_length=100, unique=True)
-    password = models.CharField(max_length=50)
-    first_name = models.CharField(max_length=50)
-    last_name = models.CharField(max_length=50)
+    password = models.CharField(max_length=150)
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
     subject = models.ForeignKey('Course', on_delete=models.CASCADE,
                                null=True) 
     roles = Choices('Student', 'Teacher')
-    role = models.CharField(max_length=20, choices=roles) 
+    role = models.CharField(max_length=50, choices=roles) 
     
     def __str__(self):
         return self.username
@@ -38,7 +38,7 @@ class Course(models.Model):
         )
     ),
     ]
-    courses = models.CharField(max_length=50, choices=all_courses,
+    courses = models.CharField(max_length=100, choices=all_courses,
                                 unique=True)
 
 

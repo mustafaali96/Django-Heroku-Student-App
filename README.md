@@ -62,11 +62,22 @@ Connect your Git repo
 
 Deploy Branch
 
+## if collectstatic error
+
+try on console with heroky login <br>
+> heroku config:set DISABLE_COLLECTSTATIC=1 --app <your-django-appname>
+
+# Create SuperUser
+
+> heroku run python manage.py createsuperuser --app <your-django-appname>
+
 
 # Custom Chnages
 
 heroku git:remote -a your-django-app-name 
 git push heroku main
+
+
 
  
 clone this repo
